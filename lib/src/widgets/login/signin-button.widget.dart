@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:julia_eats/src/utils/error-snack.dart';
+import 'package:julia_eats/src/utils/flushbar.dart';
 
-class EntrarButton extends StatelessWidget {
+class SignInButton extends StatelessWidget {
   Function _submit;
 
-  EntrarButton(this._submit);
+  SignInButton(this._submit);
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      padding: EdgeInsets.all(12),
-      onPressed: (){
-        _submit();
-        ErrorSnack.showError(context, "Campo email inválido");
-      },
-      child: Text(
-        "Entrar",
-        style: TextStyle(fontSize: 20),
+    return SizedBox(
+      width: double.infinity,
+      child: RaisedButton(
+        padding: EdgeInsets.all(12),
+        onPressed: (){
+          _submit();
+          // CustomFlushbar.showError(context, "Campo email inválido");
+        },
+        child: Text(
+          "Entrar",
+          style: TextStyle(fontSize: 20),
+        ),
       ),
     );
   }

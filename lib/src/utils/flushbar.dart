@@ -1,7 +1,7 @@
 import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
-class ErrorSnack{
+class CustomFlushbar{
   static void showError(BuildContext context, String error) {
     Flushbar(
       icon: Icon(
